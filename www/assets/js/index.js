@@ -4,9 +4,9 @@
 
 //varible hold loading msg
 var loadmsg="Please Wait....";
-var GBCServicePath = "http://tiaapp.goyalonline.in/";
+//var GBCServicePath = "http://tiaapp.goyalonline.in/";
 
-//var GBCServicePath = "http://localhost:51738/";
+var GBCServicePath = "http://localhost:51738/";
 var isprint = '0';
 var pictureSource;
 var destinationType;
@@ -59,6 +59,7 @@ function onDeviceReady() {
     document.addEventListener("deviceready", HideWaiting, true);
     document.addEventListener("backbutton", BackButton, true); 
     document.addEventListener("pause", BackButton, false);
+    window.addEventListener("batterystatus", onBatteryStatus, false);
     loadmsg = "Checking Data...";
   //  $(".show-page-loading-msg").click();
     window.location.href = "#page-con";
